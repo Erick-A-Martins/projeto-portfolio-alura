@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 * {
     margin: 0;
@@ -18,13 +18,16 @@ body {
 
 .apresentacao {
     display: flex; /* Por padrao coloca os elementos em linha (row) - porem é possivel mudar usando flex-direction: column por exemplo que coloca os elementos na vertical*/;
-    margin: 10%;
+    margin: 10% 15%;
     align-items: center; /* alinhar os elementos, centralizando-os em relação a si mesmo */
     justify-content: space-between;
 }
 
 .apresentacao__conteudo {
     width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .apresentacao__conteudo__titulo {
@@ -40,4 +43,17 @@ body {
 .apresentacao__links {
     display: flex;
     justify-content: space-between;
+}
+
+.apresentacao__links__botao {
+    background-color: #8CFF5C;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    width: 280px;
+    padding: 21.5px 0;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none;
 }
