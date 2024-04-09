@@ -17,7 +17,6 @@
 }
 
 body {
-    /* height: 100vh; */ /* vh - viewport height */
     box-sizing: border-box; /* Não deixa elementos sairem do body */
     background-color: var(--cor-primaria);
     color:  var(--cor-secundaria);
@@ -68,13 +67,14 @@ body {
 
 .apresentacao {
     display: flex; /* Por padrao coloca os elementos em linha (row) - porem é possivel mudar usando flex-direction: column por exemplo que coloca os elementos na vertical*/;
-    padding: 8% 15%;
+    padding: 5% 15%;
     align-items: center; /* alinhar os elementos, centralizando-os em relação a si mesmo */
     justify-content: space-between;
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -109,7 +109,7 @@ body {
     font-size: 1.5rem;
 }
 
-.apresentacao__links__botao {
+.apresentacao__links__botoes {
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -118,16 +118,20 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     font-family: var(--fonte-secundaria);
-    width: 378px;
+    width: 50%;
     padding: 21.5px 0;
     border-radius: 8px;
     text-align: center;
     text-decoration: none;
 }
 
-.apresentacao__links__botao:hover {
+.apresentacao__links__botoes:hover {
     background-color: var(--cor-bg-hover);
     border: 2px solid var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 50%;
 }
 /* END MAIN */
 
@@ -143,3 +147,23 @@ body {
     font-weight: 500;
 }
 /* END FOOTER */
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
